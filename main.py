@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 import sys
 import io
+import os
 from collections import Counter
 
+# Fetch command history
+os.system("history >> hist.txt")
 # Ensure the script outputs in UTF-8
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
 
 def draw_unicode_table(data):
     # Determine the maximum width for each column
